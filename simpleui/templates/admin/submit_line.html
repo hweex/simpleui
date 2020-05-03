@@ -39,7 +39,8 @@
             data: {},
             methods: {
                 del: function (url) {
-                    window.location.href = url;
+                    //window.location.href = url;
+                    history.go(-1);
                 },
                 formSubmit: function (name, v, e) {
                     $("#actionName").attr('name', name).val(v);
