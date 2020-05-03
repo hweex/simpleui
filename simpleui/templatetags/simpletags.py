@@ -390,6 +390,8 @@ from django.db.models.fields.related import ForeignKey
 
 def get_model_fields(model, base=None):
     field_list = []
+    if isinstance(model, str):
+        return field_list
     fields = model._meta.fields
     for f in fields:
         label = f.name
